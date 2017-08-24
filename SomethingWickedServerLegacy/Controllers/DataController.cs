@@ -22,7 +22,7 @@ namespace SomethingWickedServerLegacy.Controllers
         {
             //Get the shows from the database
             var showsDB = await db.Schedule.Include(s => s.Venues)
-                    .Where(x => DbFunctions.TruncateTime(x.DateTime) > DbFunctions.TruncateTime(DateTime.Now))
+                    .Where(x => DbFunctions.TruncateTime(x.DateTime) >= DbFunctions.TruncateTime(DateTime.Now))
                     .Select(x => new
                     {
                         dateTime = x.DateTime,
