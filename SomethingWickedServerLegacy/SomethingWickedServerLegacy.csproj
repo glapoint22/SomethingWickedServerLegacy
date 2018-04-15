@@ -121,32 +121,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\images\members\Amy.png" />
-    <Content Include="assets\images\members\Bron.png" />
-    <Content Include="assets\images\members\Don.png" />
-    <Content Include="assets\images\members\Gabe.png" />
-    <Content Include="assets\images\members\Tyler.png" />
-    <Content Include="assets\images\showcaseImages\IMG_6246.jpg" />
-    <Content Include="assets\images\showcaseImages\IMG_6297.jpg" />
-    <Content Include="assets\images\showcaseImages\IMG_6304.jpg" />
-    <Content Include="assets\images\SomethingWickedLogo.png" />
-    <Content Include="favicon.ico" />
-    <Content Include="index.html" />
-    <Content Include="inline.99b22b417f910df333ee.bundle.js" />
-    <Content Include="main.0b06d31c7f18f4934abd.bundle.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="SomethingWicked.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SomethingWicked.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="polyfills.3ae08eaf6129a55130cb.bundle.js" />
-    <Content Include="SomethingWicked.edmx.diagram">
-      <DependentUpon>SomethingWicked.edmx</DependentUpon>
-    </Content>
     <None Include="Properties\PublishProfiles\SomethingWicked.pubxml" />
+    <EntityDeploy Include="Something_Wicked.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Something_Wicked.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Something_Wicked.edmx.diagram">
+      <DependentUpon>Something_Wicked.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -156,76 +142,77 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="SomethingWicked.Context.tt">
+    <Content Include="Something_Wicked.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SomethingWicked.edmx</DependentUpon>
-      <LastGenOutput>SomethingWicked.Context.cs</LastGenOutput>
+      <DependentUpon>Something_Wicked.edmx</DependentUpon>
+      <LastGenOutput>Something_Wicked.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="SomethingWicked.tt">
+    <Content Include="Something_Wicked.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SomethingWicked.edmx</DependentUpon>
-      <LastGenOutput>SomethingWicked.cs</LastGenOutput>
+      <DependentUpon>Something_Wicked.edmx</DependentUpon>
+      <LastGenOutput>Something_Wicked.cs</LastGenOutput>
     </Content>
-    <Content Include="styles.f55fac8d9e978d412150.bundle.css" />
-    <Content Include="vendor.10acab0ba314e13eddfc.bundle.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Bios.cs">
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\BiosController.cs" />
-    <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\MediaGroupsController.cs" />
+    <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Controllers\PhotosController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="Controllers\ShowcaseImagesController.cs" />
+    <Compile Include="Controllers\SongsController.cs" />
     <Compile Include="Controllers\VideosController.cs" />
     <Compile Include="Facebook.cs" />
     <Compile Include="Genres.cs">
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Members.cs">
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
     <Compile Include="Photos.cs">
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schedule.cs">
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
     <Compile Include="ShowcaseImages.cs">
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
-    <Compile Include="SomethingWicked.Context.cs">
+    <Compile Include="Something_Wicked.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SomethingWicked.Context.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="SomethingWicked.cs">
+    <Compile Include="Something_Wicked.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
-    <Compile Include="SomethingWicked.Designer.cs">
+    <Compile Include="Something_Wicked.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SomethingWicked.edmx</DependentUpon>
+      <DependentUpon>Something_Wicked.edmx</DependentUpon>
     </Compile>
     <Compile Include="Songs.cs">
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
     <Compile Include="Venues.cs">
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
     <Compile Include="VideoGroups.cs">
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
     <Compile Include="Videos.cs">
-      <DependentUpon>SomethingWicked.tt</DependentUpon>
+      <DependentUpon>Something_Wicked.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +220,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\images\members\" />
+    <Folder Include="assets\images\showcaseImages\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

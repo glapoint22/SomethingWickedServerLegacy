@@ -31,7 +31,6 @@ namespace SomethingWickedServerLegacy.Controllers
             }
 
             return Ok(facebookContent);
-
         }
     }
 }

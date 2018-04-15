@@ -17,14 +17,13 @@ namespace SomethingWickedServerLegacy.Controllers
         public async Task<IHttpActionResult> Get(string id)
         {
             var bio = await db.Bios
-                    .Include(m => m.Members)
-                    .Where(b => b.Members.Name == id)
-                        .Select(a => new {
-                            title = a.Members.Name,
-                            bio = a.Bio,
-                            thumbnail = a.Members.Thumbnail
-                        })
-                    .SingleOrDefaultAsync();
+                .Where(b => b.Members.Name == id)
+                    .Select(a => new {
+                        title = a.Members.Name,
+                        bio = a.Bio,
+                        thumbnail = a.Members.Thumbnail
+                    })
+                .SingleOrDefaultAsync();
 
             if (bio == null)
             {
